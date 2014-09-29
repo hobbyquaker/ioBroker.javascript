@@ -837,7 +837,7 @@
                 enumNames.push(objects[enums[i]].common.name);
             }
         }
-        if (objects[idObj].parent) {
+        if (objects[idObj] && objects[idObj].parent) {
             getObjectEnums(objects[idObj].parent, callback, enumIds, enumNames);
         } else {
             cacheObjectEnums[idObj] = {enumIds: enumIds, enumNames: enumNames};
